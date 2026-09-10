@@ -1,0 +1,273 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/downloads.css
+   Version: 1.0.0
+   Sprint: 9 - Downloads Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Downloads Page
+   ========================================================== */
+
+.downloads-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.downloads-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.downloads-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Container
+   ========================================================== */
+
+.downloads-container {
+
+    min-height:
+
+        350px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Download Card
+   ========================================================== */
+
+.download-card {
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        12px;
+
+    padding:
+
+        18px;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+.download-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+.download-name {
+
+    font-weight:
+
+        bold;
+
+}
+
+
+
+
+
+.download-status {
+
+    color:
+
+        #f59e0b;
+
+}
+
+
+
+
+
+.download-completed {
+
+    color:
+
+        #22c55e;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Progress
+   ========================================================== */
+
+.download-progress {
+
+    width:
+
+        100%;
+
+    height:
+
+        10px;
+
+    background:
+
+        #334155;
+
+    border-radius:
+
+        10px;
+
+    overflow:
+
+        hidden;
+
+}
+
+
+
+
+
+.download-progress-bar {
+
+    height:
+
+        100%;
+
+    width:
+
+        0%;
+
+    background:
+
+        #7b5cff;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Info
+   ========================================================== */
+
+.download-info {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    margin-top:
+
+        10px;
+
+    color:
+
+        #94a3b8;
+
+    font-size:
+
+        13px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Empty
+   ========================================================== */
+
+.empty-downloads {
+
+    text-align:
+
+        center;
+
+    color:
+
+        #64748b;
+
+    padding:
+
+        40px;
+
+}

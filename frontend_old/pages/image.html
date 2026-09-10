@@ -1,0 +1,241 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/pages/image.html
+   Version: 1.0.0
+   Sprint: 9 - Image Studio Screen
+   ========================================================== */
+
+
+<div class="image-page">
+
+
+
+    <!-- Header -->
+
+    <div class="image-header">
+
+
+        <div>
+
+            <h2>
+
+                🎨 Image Studio
+
+            </h2>
+
+
+            <p>
+
+                Yapay zeka ile görseller oluştur
+
+            </p>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Generator Panel -->
+
+
+    <div class="image-generator card">
+
+
+
+        <label>
+
+            Prompt
+
+        </label>
+
+
+
+        <textarea
+
+            id="image-prompt"
+
+            placeholder="Nasıl bir görsel oluşturmak istiyorsunuz?"
+
+        ></textarea>
+
+
+
+
+
+        <div class="image-options">
+
+
+
+            <div>
+
+                <label>
+
+                    Stil
+
+                </label>
+
+
+                <select id="image-style">
+
+
+                    <option>
+
+                        Realistic
+
+                    </option>
+
+
+                    <option>
+
+                        Anime
+
+                    </option>
+
+
+                    <option>
+
+                        Fantasy
+
+                    </option>
+
+
+                    <option>
+
+                        Cinematic
+
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+
+
+
+            <div>
+
+                <label>
+
+                    Boyut
+
+                </label>
+
+
+                <select id="image-size">
+
+
+                    <option>
+
+                        1024x1024
+
+                    </option>
+
+
+                    <option>
+
+                        768x768
+
+                    </option>
+
+
+                    <option>
+
+                        512x512
+
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <button
+
+            class="btn"
+
+            id="generate-image">
+
+
+            Görsel Oluştur
+
+
+        </button>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Gallery -->
+
+
+    <div class="image-gallery card">
+
+
+
+        <h3>
+
+            🖼 Galeri
+
+        </h3>
+
+
+
+        <div
+
+            id="image-list"
+
+            class="gallery-grid">
+
+
+
+            <div class="empty-gallery">
+
+                Henüz görsel yok
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</div>

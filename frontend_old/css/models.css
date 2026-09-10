@@ -1,0 +1,293 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/models.css
+   Version: 1.0.0
+   Sprint: 9 - Models Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Models Page
+   ========================================================== */
+
+.models-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.models-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.models-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Models Grid
+   ========================================================== */
+
+.models-grid {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(
+
+                260px,
+
+                1fr
+
+            )
+
+        );
+
+    gap:
+
+        20px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Model Card
+   ========================================================== */
+
+.model-card {
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        14px;
+
+    padding:
+
+        20px;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+
+
+.model-card:hover {
+
+    transform:
+
+        translateY(-5px);
+
+    border-color:
+
+        #7b5cff;
+
+}
+
+
+
+
+
+.model-card.active {
+
+    border:
+
+        2px solid #22c55e;
+
+}
+
+
+
+
+
+.model-card h3 {
+
+    margin-bottom:
+
+        10px;
+
+}
+
+
+
+
+
+.model-card p {
+
+    color:
+
+        #94a3b8;
+
+    margin-bottom:
+
+        20px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Search
+   ========================================================== */
+
+#model-search {
+
+    height:
+
+        45px;
+
+}
+
+
+
+/* ==========================================================
+   Status
+   ========================================================== */
+
+.model-status {
+
+    display:
+
+        inline-flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        8px;
+
+    font-size:
+
+        13px;
+
+}
+
+
+
+
+
+.model-online {
+
+    color:
+
+        #22c55e;
+
+}
+
+
+
+
+
+.model-offline {
+
+    color:
+
+        #ef4444;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Loading
+   ========================================================== */
+
+.model-loading {
+
+    height:
+
+        5px;
+
+    background:
+
+        #334155;
+
+    border-radius:
+
+        10px;
+
+    overflow:
+
+        hidden;
+
+}
+
+
+
+
+
+.model-loading-bar {
+
+    height:
+
+        100%;
+
+    width:
+
+        50%;
+
+    background:
+
+        #7b5cff;
+
+}

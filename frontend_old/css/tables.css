@@ -1,0 +1,445 @@
+/* ==========================================================
+   Easy AI Studio
+   Sprint 2 - UI Foundation
+   File: frontend/css/tables.css
+   Version: 1.0.0
+   ========================================================== */
+
+/* ==========================================================
+   Table Container
+   ========================================================== */
+
+.table-container{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    border:1px solid var(--color-border);
+
+    border-radius:16px;
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-sm);
+}
+
+/* ==========================================================
+   Table
+   ========================================================== */
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+    min-width:720px;
+}
+
+.table caption{
+
+    padding:18px 22px;
+
+    text-align:left;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--color-text);
+}
+
+/* ==========================================================
+   Head
+   ========================================================== */
+
+.table thead{
+
+    background:var(--color-surface-2);
+}
+
+.table thead th{
+
+    padding:16px 20px;
+
+    text-align:left;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    text-transform:uppercase;
+
+    color:var(--color-text-muted);
+
+    border-bottom:1px solid var(--color-border);
+
+    white-space:nowrap;
+}
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+.table tbody tr{
+
+    transition:
+        background var(--transition),
+        border-color var(--transition);
+}
+
+.table tbody tr:hover{
+
+    background:rgba(255,255,255,.03);
+}
+
+.table tbody td{
+
+    padding:18px 20px;
+
+    border-bottom:1px solid var(--color-border);
+
+    color:var(--color-text-light);
+
+    vertical-align:middle;
+}
+
+.table tbody tr:last-child td{
+
+    border-bottom:none;
+}
+
+/* ==========================================================
+   Row States
+   ========================================================== */
+
+.table-row-active{
+
+    background:rgba(79,140,255,.08);
+}
+
+.table-row-selected{
+
+    background:rgba(79,140,255,.12);
+}
+
+.table-row-disabled{
+
+    opacity:.55;
+
+    pointer-events:none;
+}
+
+/* ==========================================================
+   Cell Helpers
+   ========================================================== */
+
+.table-nowrap{
+
+    white-space:nowrap;
+}
+
+.table-center{
+
+    text-align:center;
+}
+
+.table-right{
+
+    text-align:right;
+}
+
+.table-muted{
+
+    color:var(--color-text-muted);
+}
+
+.table-strong{
+
+    font-weight:600;
+
+    color:var(--color-text);
+}
+
+/* ==========================================================
+   Actions
+   ========================================================== */
+
+.table-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:8px;
+}
+
+.table-action{
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:var(--color-text-muted);
+
+    cursor:pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition-fast);
+}
+
+.table-action:hover{
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--color-text);
+}
+
+.table-action:active{
+
+    transform:scale(.95);
+}
+
+/* ==========================================================
+   Status
+   ========================================================== */
+
+.table-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.table-status-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+}
+
+.table-status-success .table-status-dot{
+
+    background:var(--color-success);
+}
+
+.table-status-warning .table-status-dot{
+
+    background:var(--color-warning);
+}
+
+.table-status-danger .table-status-dot{
+
+    background:var(--color-danger);
+}
+
+.table-status-info .table-status-dot{
+
+    background:var(--color-primary);
+}
+
+/* ==========================================================
+   Avatar Cell
+   ========================================================== */
+
+.table-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.table-user-avatar{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+}
+
+.table-user-avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.table-user-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+}
+
+.table-user-name{
+
+    font-weight:600;
+
+    color:var(--color-text);
+}
+
+.table-user-email{
+
+    font-size:13px;
+
+    color:var(--color-text-muted);
+}
+
+/* ==========================================================
+   Empty State
+   ========================================================== */
+
+.table-empty{
+
+    padding:60px 24px;
+
+    text-align:center;
+
+    color:var(--color-text-muted);
+}
+
+/* ==========================================================
+   Pagination
+   ========================================================== */
+
+.table-pagination{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:18px 20px;
+
+    border-top:1px solid var(--color-border);
+
+    background:var(--color-surface);
+}
+
+.table-pagination-info{
+
+    font-size:13px;
+
+    color:var(--color-text-muted);
+}
+
+.table-pagination-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.table-page{
+
+    min-width:38px;
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:var(--color-text);
+
+    cursor:pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+.table-page:hover{
+
+    background:rgba(255,255,255,.05);
+}
+
+.table-page.active{
+
+    background:var(--color-primary);
+
+    color:#fff;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width:768px){
+
+    .table{
+
+        min-width:640px;
+    }
+
+    .table thead th{
+
+        padding:14px 16px;
+    }
+
+    .table tbody td{
+
+        padding:16px;
+    }
+
+    .table-pagination{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+}

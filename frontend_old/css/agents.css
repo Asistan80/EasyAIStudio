@@ -1,0 +1,295 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/agents.css
+   Version: 1.0.0
+   Sprint: 9 - Agents Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Agents Page
+   ========================================================== */
+
+.agents-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.agents-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.agents-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Create Area
+   ========================================================== */
+
+.agent-create {
+
+    display:
+
+        flex;
+
+    flex-direction:
+
+        column;
+
+    gap:
+
+        15px;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+
+
+.agent-create textarea {
+
+    height:
+
+        120px;
+
+    resize:
+
+        vertical;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Agent Grid
+   ========================================================== */
+
+.agents-grid {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(
+
+                260px,
+
+                1fr
+
+            )
+
+        );
+
+    gap:
+
+        20px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Agent Card
+   ========================================================== */
+
+.agent-card {
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        14px;
+
+    padding:
+
+        20px;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+
+
+.agent-card:hover {
+
+    transform:
+
+        translateY(-5px);
+
+    border-color:
+
+        #7b5cff;
+
+}
+
+
+
+
+
+.agent-card h3 {
+
+    margin-bottom:
+
+        10px;
+
+}
+
+
+
+
+
+.agent-card p {
+
+    color:
+
+        #94a3b8;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Status
+   ========================================================== */
+
+.agent-status {
+
+    display:
+
+        inline-block;
+
+    padding:
+
+        6px 12px;
+
+    border-radius:
+
+        20px;
+
+    background:
+
+        #1e293b;
+
+    color:
+
+        #22c55e;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+.agent-running {
+
+    color:
+
+        #f59e0b;
+
+}
+
+
+
+
+
+.agent-error {
+
+    color:
+
+        #ef4444;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Agent Tools
+   ========================================================== */
+
+.agent-tools {
+
+    display:
+
+        flex;
+
+    gap:
+
+        10px;
+
+    flex-wrap:
+
+        wrap;
+
+}

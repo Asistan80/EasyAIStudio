@@ -1,0 +1,295 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/image.css
+   Version: 1.0.0
+   Sprint: 9 - Image Studio Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Image Page
+   ========================================================== */
+
+.image-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.image-header {
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.image-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+/* ==========================================================
+   Generator
+   ========================================================== */
+
+.image-generator {
+
+    display:
+
+        flex;
+
+    flex-direction:
+
+        column;
+
+    gap:
+
+        15px;
+
+}
+
+
+
+.image-generator textarea {
+
+    height:
+
+        150px;
+
+    resize:
+
+        vertical;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Options
+   ========================================================== */
+
+.image-options {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            2,
+
+            1fr
+
+        );
+
+    gap:
+
+        20px;
+
+}
+
+
+
+
+
+.image-options label {
+
+    display:
+
+        block;
+
+    margin-bottom:
+
+        8px;
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Gallery
+   ========================================================== */
+
+.image-gallery {
+
+    margin-top:
+
+        25px;
+
+}
+
+
+
+
+
+.gallery-grid {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(
+
+                220px,
+
+                1fr
+
+            )
+
+        );
+
+    gap:
+
+        20px;
+
+    margin-top:
+
+        20px;
+
+}
+
+
+
+
+
+.image-item {
+
+    background:
+
+        #0f172a;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        12px;
+
+    overflow:
+
+        hidden;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+.image-item:hover {
+
+    transform:
+
+        scale(
+
+            1.03
+
+        );
+
+}
+
+
+
+
+
+.image-item img {
+
+    width:
+
+        100%;
+
+    display:
+
+        block;
+
+}
+
+
+
+
+
+.image-info {
+
+    padding:
+
+        12px;
+
+    color:
+
+        #cbd5e1;
+
+}
+
+
+
+
+
+.empty-gallery {
+
+    color:
+
+        #64748b;
+
+    text-align:
+
+        center;
+
+    padding:
+
+        30px;
+
+}
+
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media(max-width:700px) {
+
+
+    .image-options {
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Easy AI Studio",
+    "short_name": "EAS",
+    "version": "1.0.0",
+    "build": 1,
+    "release": "Alpha",
+    "author": "Murat",
+    "description": "AI-powered content creation studio.",
+    "license": "MIT",
+    "python": "3.12",
+    "website": "",
+    "github": "",
+    "created": "2026-07-15"
+}

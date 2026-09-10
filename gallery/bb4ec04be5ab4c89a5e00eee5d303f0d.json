@@ -1,0 +1,14 @@
+{
+    "prompt": "A majestic fantasy castle on a mountain at sunset",
+    "negative_prompt": "",
+    "seed": -1,
+    "model": "",
+    "sampler": "",
+    "scheduler": "",
+    "cfg": 7.5,
+    "steps": 30,
+    "width": 1024,
+    "height": 1024,
+    "provider": "ComfyUI",
+    "favorite": false
+}

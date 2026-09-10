@@ -1,0 +1,367 @@
+/* ==========================================================
+   Easy AI Studio
+   Sprint 2 - UI Foundation
+   File: frontend/css/notifications.css
+   Version: 1.0.0
+   ========================================================== */
+
+/* ==========================================================
+   Notification Container
+   ========================================================== */
+
+.notifications{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:380px;
+
+    max-width:calc(100vw - 32px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    z-index:12000;
+
+    pointer-events:none;
+}
+
+/* ==========================================================
+   Notification
+   ========================================================== */
+
+.notification{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:18px;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-left:4px solid var(--color-primary);
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow-md);
+
+    pointer-events:auto;
+
+    opacity:0;
+
+    transform:translateX(30px);
+
+    animation:
+        notificationIn .25s ease forwards;
+}
+
+/* ==========================================================
+   Types
+   ========================================================== */
+
+.notification-success{
+
+    border-left-color:var(--color-success);
+}
+
+.notification-warning{
+
+    border-left-color:var(--color-warning);
+}
+
+.notification-danger{
+
+    border-left-color:var(--color-danger);
+}
+
+.notification-info{
+
+    border-left-color:var(--color-primary);
+}
+
+/* ==========================================================
+   Icon
+   ========================================================== */
+
+.notification-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(79,140,255,.12);
+
+    color:var(--color-primary);
+
+    flex-shrink:0;
+}
+
+.notification-success .notification-icon{
+
+    background:rgba(46,204,113,.14);
+
+    color:var(--color-success);
+}
+
+.notification-warning .notification-icon{
+
+    background:rgba(241,196,15,.14);
+
+    color:var(--color-warning);
+}
+
+.notification-danger .notification-icon{
+
+    background:rgba(231,76,60,.14);
+
+    color:var(--color-danger);
+}
+
+.notification-icon svg,
+.notification-icon i{
+
+    width:20px;
+
+    height:20px;
+}
+
+/* ==========================================================
+   Content
+   ========================================================== */
+
+.notification-content{
+
+    flex:1;
+
+    min-width:0;
+}
+
+.notification-title{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--color-text);
+
+    margin-bottom:4px;
+}
+
+.notification-message{
+
+    font-size:13px;
+
+    color:var(--color-text-light);
+
+    line-height:1.6;
+
+    word-break:break-word;
+}
+
+/* ==========================================================
+   Close
+   ========================================================== */
+
+.notification-close{
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:var(--color-text-muted);
+
+    cursor:pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition-fast);
+
+    flex-shrink:0;
+}
+
+.notification-close:hover{
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--color-text);
+}
+
+.notification-close:active{
+
+    transform:scale(.95);
+}
+
+/* ==========================================================
+   Progress
+   ========================================================== */
+
+.notification-progress{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:3px;
+
+    overflow:hidden;
+
+    border-radius:0 0 16px 16px;
+}
+
+.notification-progress-bar{
+
+    width:100%;
+
+    height:100%;
+
+    background:var(--color-primary);
+
+    transform-origin:left center;
+
+    animation:notificationTimer 5s linear forwards;
+}
+
+.notification-success .notification-progress-bar{
+
+    background:var(--color-success);
+}
+
+.notification-warning .notification-progress-bar{
+
+    background:var(--color-warning);
+}
+
+.notification-danger .notification-progress-bar{
+
+    background:var(--color-danger);
+}
+
+/* ==========================================================
+   Toast Position Helpers
+   ========================================================== */
+
+.notifications.left{
+
+    left:20px;
+
+    right:auto;
+}
+
+.notifications.bottom{
+
+    top:auto;
+
+    bottom:20px;
+}
+
+/* ==========================================================
+   Animations
+   ========================================================== */
+
+@keyframes notificationIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes notificationOut{
+
+    from{
+
+        opacity:1;
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateX(30px);
+    }
+
+}
+
+@keyframes notificationTimer{
+
+    from{
+
+        transform:scaleX(1);
+    }
+
+    to{
+
+        transform:scaleX(0);
+    }
+
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width:640px){
+
+    .notifications{
+
+        top:12px;
+
+        right:12px;
+
+        left:12px;
+
+        width:auto;
+    }
+
+    .notification{
+
+        padding:16px;
+    }
+
+}

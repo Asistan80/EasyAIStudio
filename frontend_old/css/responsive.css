@@ -1,0 +1,344 @@
+/* ==========================================================
+   Easy AI Studio
+   Sprint 2 - UI Foundation
+   File: frontend/css/responsive.css
+   Version: 1.0.0
+   ========================================================== */
+
+/* ==========================================================
+   Responsive Strategy
+   ----------------------------------------------------------
+   Breakpoints
+
+   XXL : 1600px
+   XL  : 1400px
+   LG  : 1200px
+   MD  : 992px
+   SM  : 768px
+   XS  : 576px
+   ========================================================== */
+
+/* ==========================================================
+   ≤ 1600px
+   ========================================================== */
+
+@media (max-width:1600px){
+
+    .page{
+
+        max-width:1400px;
+    }
+
+}
+
+/* ==========================================================
+   ≤ 1400px
+   ========================================================== */
+
+@media (max-width:1400px){
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .cards-grid{
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(280px,1fr));
+    }
+
+    .settings{
+
+        gap:20px;
+    }
+
+}
+
+/* ==========================================================
+   ≤ 1200px
+   ========================================================== */
+
+@media (max-width:1200px){
+
+    .app-content{
+
+        padding:22px;
+    }
+
+    .dashboard-stats{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .grid-4{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+/* ==========================================================
+   ≤ 992px
+   ========================================================== */
+
+@media (max-width:992px){
+
+    .settings{
+
+        flex-direction:column;
+    }
+
+    .settings-sidebar{
+
+        width:100%;
+
+        min-width:100%;
+    }
+
+    .dashboard-welcome{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .topbar-user-info{
+
+        display:none;
+    }
+
+}
+
+/* ==========================================================
+   ≤ 768px
+   ========================================================== */
+
+@media (max-width:768px){
+
+    .app-content{
+
+        padding:18px;
+    }
+
+    .page-title{
+
+        font-size:24px;
+    }
+
+    .dashboard-stats{
+
+        grid-template-columns:1fr;
+    }
+
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4{
+
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+
+        grid-template-columns:1fr;
+    }
+
+    .toolbar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .toolbar-group{
+
+        width:100%;
+    }
+
+    .card-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .modal-footer{
+
+        flex-direction:column;
+    }
+
+    .modal-footer .btn{
+
+        width:100%;
+    }
+
+    .table-pagination{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .settings-option{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+}
+
+/* ==========================================================
+   ≤ 576px
+   ========================================================== */
+
+@media (max-width:576px){
+
+    .topbar{
+
+        padding:0 14px;
+    }
+
+    .topbar-center{
+
+        display:none;
+    }
+
+    .sidebar{
+
+        width:100%;
+
+        max-width:300px;
+    }
+
+    .dashboard-welcome{
+
+        padding:20px;
+    }
+
+    .dashboard-welcome-title{
+
+        font-size:22px;
+    }
+
+    .panel-header,
+
+    .panel-body,
+
+    .panel-footer,
+
+    .card-header,
+
+    .card-body,
+
+    .card-footer,
+
+    .settings-section-header,
+
+    .settings-section-body{
+
+        padding:16px;
+    }
+
+    .notifications{
+
+        left:10px;
+
+        right:10px;
+
+        width:auto;
+    }
+
+}
+
+/* ==========================================================
+   ≤ 420px
+   ========================================================== */
+
+@media (max-width:420px){
+
+    .btn{
+
+        width:100%;
+    }
+
+    .topbar{
+
+        height:60px;
+    }
+
+    .page-title{
+
+        font-size:20px;
+    }
+
+    .dashboard-welcome-actions{
+
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .dashboard-welcome-actions .btn{
+
+        width:100%;
+    }
+
+    .settings-profile{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+}
+
+/* ==========================================================
+   Landscape Phones
+   ========================================================== */
+
+@media (max-height:500px){
+
+    .modal{
+
+        max-height:96vh;
+    }
+
+    .sidebar{
+
+        overflow-y:auto;
+    }
+
+    .dashboard{
+
+        gap:18px;
+    }
+
+}
+
+/* ==========================================================
+   Large Screens
+   ========================================================== */
+
+@media (min-width:1800px){
+
+    .page{
+
+        max-width:1700px;
+    }
+
+    .cards-grid{
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(340px,1fr));
+    }
+
+}

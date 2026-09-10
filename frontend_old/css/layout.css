@@ -1,0 +1,433 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/layout.css
+   Version: 1.0.0
+   Sprint: 9 - Layout System
+   ========================================================== */
+
+
+/* ==========================================================
+   Main Container
+   ========================================================== */
+
+#app-container {
+
+
+    display:
+
+        flex;
+
+
+    width:
+
+        100%;
+
+
+    height:
+
+        100vh;
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   Sidebar
+   ========================================================== */
+
+.sidebar {
+
+
+    width:
+
+        260px;
+
+
+    height:
+
+        100vh;
+
+
+    background:
+
+        #111827;
+
+
+    border-right:
+
+        1px solid var(--border);
+
+
+
+    padding:
+
+        20px;
+
+
+
+    display:
+
+        flex;
+
+
+    flex-direction:
+
+        column;
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   Logo
+   ========================================================== */
+
+.logo {
+
+
+    font-size:
+
+        22px;
+
+
+    font-weight:
+
+        bold;
+
+
+    margin-bottom:
+
+        30px;
+
+
+
+    color:
+
+        white;
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   Menu
+   ========================================================== */
+
+.sidebar nav {
+
+
+    display:
+
+        flex;
+
+
+    flex-direction:
+
+        column;
+
+
+
+    gap:
+
+        8px;
+
+
+
+}
+
+
+
+
+
+.menu-item {
+
+
+    padding:
+
+        12px 15px;
+
+
+
+    border-radius:
+
+        10px;
+
+
+
+    color:
+
+        var(--text-muted);
+
+
+
+    cursor:
+
+        pointer;
+
+
+
+    transition:
+
+        var(--transition);
+
+
+
+}
+
+
+
+
+
+.menu-item:hover {
+
+
+    background:
+
+        #1e293b;
+
+
+    color:
+
+        white;
+
+
+}
+
+
+
+
+
+.menu-item.active {
+
+
+    background:
+
+        var(--primary);
+
+
+
+    color:
+
+        white;
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   Main Content
+   ========================================================== */
+
+.main-content {
+
+
+    flex:
+
+        1;
+
+
+
+    height:
+
+        100vh;
+
+
+
+    overflow:
+
+        hidden;
+
+
+
+    padding:
+
+        25px;
+
+
+
+}
+
+
+
+
+
+#app {
+
+
+    width:
+
+        100%;
+
+
+
+    height:
+
+        100%;
+
+
+
+    overflow-y:
+
+        auto;
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   Page Animation
+   ========================================================== */
+
+#app > div {
+
+
+    animation:
+
+        fadeIn .25s ease;
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   Mobile
+   ========================================================== */
+
+@media(max-width:900px) {
+
+
+
+    .sidebar {
+
+
+        width:
+
+            80px;
+
+
+        padding:
+
+            10px;
+
+
+    }
+
+
+
+
+    .logo {
+
+
+        font-size:
+
+            14px;
+
+
+    }
+
+
+
+
+    .menu-item {
+
+
+        font-size:
+
+            0;
+
+
+    }
+
+
+
+
+    .menu-item::first-letter {
+
+
+        font-size:
+
+            20px;
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:600px) {
+
+
+
+    #app-container {
+
+
+        flex-direction:
+
+            column;
+
+
+    }
+
+
+
+    .sidebar {
+
+
+        width:
+
+            100%;
+
+
+
+        height:
+
+            auto;
+
+
+    }
+
+
+
+
+    .sidebar nav {
+
+
+        flex-direction:
+
+            row;
+
+
+        overflow-x:
+
+            auto;
+
+
+    }
+
+
+
+}

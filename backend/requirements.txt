@@ -1,0 +1,52 @@
+# ==========================================================
+# Easy AI Studio
+# File    : requirements.txt
+# Version : 1.0.0
+# Sprint  : 10
+# ==========================================================
+
+fastapi>=0.116.0
+
+uvicorn[standard]>=0.35.0
+
+python-dotenv>=1.1.0
+
+pydantic>=2.11.0
+
+pydantic-settings>=2.10.0
+
+psutil>=7.0.0
+
+aiofiles>=24.1.0
+
+httpx>=0.28.0
+
+requests>=2.32.0
+
+jinja2>=3.1.6
+
+orjson>=3.11.0
+
+python-multipart>=0.0.20
+
+watchfiles>=1.1.0
+
+typing_extensions>=4.14.0
+
+Pillow>=11.3.0
+
+numpy>=2.3.0
+
+opencv-python>=4.12.0
+
+imageio>=2.37.0
+
+imageio-ffmpeg>=0.6.0
+
+moviepy>=2.2.1
+
+rich>=14.1.0
+
+loguru>=0.7.3
+
+pyyaml>=6.0.2

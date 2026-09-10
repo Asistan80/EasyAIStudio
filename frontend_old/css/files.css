@@ -1,0 +1,339 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/files.css
+   Version: 1.0.0
+   Sprint: 9 - Files Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Files Page
+   ========================================================== */
+
+.files-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.files-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.files-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Upload Area
+   ========================================================== */
+
+.upload-area {
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+
+
+#drop-zone {
+
+    min-height:
+
+        180px;
+
+    display:
+
+        flex;
+
+    flex-direction:
+
+        column;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    border:
+
+        2px dashed #334155;
+
+    border-radius:
+
+        14px;
+
+    color:
+
+        #94a3b8;
+
+    cursor:
+
+        pointer;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+
+
+#drop-zone:hover {
+
+    border-color:
+
+        #7b5cff;
+
+    color:
+
+        white;
+
+}
+
+
+
+
+
+#drop-zone.dragover {
+
+    background:
+
+        #1e293b;
+
+    border-color:
+
+        #22c55e;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Files List
+   ========================================================== */
+
+.files-list {
+
+    margin-top:
+
+        20px;
+
+}
+
+
+
+
+
+.file-card {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    padding:
+
+        15px;
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        12px;
+
+    margin-bottom:
+
+        12px;
+
+}
+
+
+
+
+
+.file-info {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        15px;
+
+}
+
+
+
+
+
+.file-icon {
+
+    font-size:
+
+        28px;
+
+}
+
+
+
+
+
+.file-name {
+
+    font-weight:
+
+        bold;
+
+}
+
+
+
+
+
+.file-size {
+
+    color:
+
+        #94a3b8;
+
+    font-size:
+
+        13px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Empty
+   ========================================================== */
+
+.empty-files {
+
+    text-align:
+
+        center;
+
+    color:
+
+        #64748b;
+
+    padding:
+
+        30px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Progress
+   ========================================================== */
+
+.upload-progress {
+
+    height:
+
+        6px;
+
+    background:
+
+        #334155;
+
+    border-radius:
+
+        10px;
+
+    overflow:
+
+        hidden;
+
+}
+
+
+
+.upload-progress-bar {
+
+    height:
+
+        100%;
+
+    width:
+
+        0%;
+
+    background:
+
+        #7b5cff;
+
+}

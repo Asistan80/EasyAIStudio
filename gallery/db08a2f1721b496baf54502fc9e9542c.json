@@ -1,0 +1,14 @@
+{
+    "prompt": "A futuristic city at sunset, cinematic, ultra detailed green",
+    "negative_prompt": "",
+    "seed": -1,
+    "model": "Flux Dev",
+    "sampler": "",
+    "scheduler": "",
+    "cfg": 7.5,
+    "steps": 30,
+    "width": 1024,
+    "height": 1024,
+    "provider": "ComfyUI",
+    "favorite": true
+}

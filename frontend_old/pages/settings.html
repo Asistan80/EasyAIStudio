@@ -1,0 +1,219 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/pages/settings.html
+   Version: 1.0.0
+   Sprint: 9 - Settings Screen
+   ========================================================== */
+
+
+<div class="settings-page">
+
+
+
+    <!-- Header -->
+
+    <div class="settings-header">
+
+
+        <h2>
+
+            ⚙️ Ayarlar
+
+        </h2>
+
+
+        <p>
+
+            Easy AI Studio sistem tercihleri
+
+        </p>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Theme Settings -->
+
+
+    <div class="settings-card card">
+
+
+
+        <h3>
+
+            🎨 Görünüm
+
+        </h3>
+
+
+
+        <label>
+
+            Tema
+
+        </label>
+
+
+
+        <select id="theme-select">
+
+
+            <option value="dark">
+
+                Koyu Tema
+
+            </option>
+
+
+            <option value="light">
+
+                Açık Tema
+
+            </option>
+
+
+        </select>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- AI Settings -->
+
+
+    <div class="settings-card card">
+
+
+
+        <h3>
+
+            🤖 AI Ayarları
+
+        </h3>
+
+
+
+        <label>
+
+            Varsayılan Model
+
+        </label>
+
+
+
+        <select id="default-model">
+
+
+            <option>
+
+                Otomatik
+
+            </option>
+
+
+        </select>
+
+
+
+
+        <label>
+
+            Maksimum Token
+
+        </label>
+
+
+
+        <input
+
+            type="number"
+
+            id="max-token"
+
+            value="2048"
+
+        >
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- API Settings -->
+
+
+    <div class="settings-card card">
+
+
+
+        <h3>
+
+            🔑 API Ayarları
+
+        </h3>
+
+
+
+        <label>
+
+            API Anahtarı
+
+        </label>
+
+
+
+        <input
+
+            type="password"
+
+            id="api-key"
+
+            placeholder="API Key"
+
+        >
+
+
+
+
+        <button
+
+            class="btn"
+
+            id="save-settings">
+
+
+            Kaydet
+
+
+        </button>
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>

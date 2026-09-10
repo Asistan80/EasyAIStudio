@@ -1,0 +1,296 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/pages/video.html
+   Version: 1.0.0
+   Sprint: 9 - Video Studio Screen
+   ========================================================== */
+
+
+<div class="video-page">
+
+
+
+    <!-- Header -->
+
+    <div class="video-header">
+
+
+        <h2>
+
+            🎬 Video Studio
+
+        </h2>
+
+
+        <p>
+
+            Yapay zeka ile kısa veya uzun videolar oluştur
+
+        </p>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Generator -->
+
+
+    <div class="video-generator card">
+
+
+
+        <label>
+
+            Video Prompt
+
+        </label>
+
+
+
+        <textarea
+
+            id="video-prompt"
+
+            placeholder="Oluşturmak istediğiniz videoyu anlatın..."
+
+        ></textarea>
+
+
+
+
+
+
+
+        <div class="video-options">
+
+
+
+            <div>
+
+
+                <label>
+
+                    Süre
+
+                </label>
+
+
+
+                <select id="video-duration">
+
+
+                    <option>
+
+                        10 saniye
+
+                    </option>
+
+
+                    <option>
+
+                        30 saniye
+
+                    </option>
+
+
+                    <option>
+
+                        1 dakika
+
+                    </option>
+
+
+                    <option>
+
+                        5 dakika
+
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div>
+
+
+                <label>
+
+                    Format
+
+                </label>
+
+
+
+                <select id="video-format">
+
+
+                    <option>
+
+                        16:9 YouTube
+
+                    </option>
+
+
+                    <option>
+
+                        9:16 Shorts
+
+                    </option>
+
+
+                    <option>
+
+                        1:1 Kare
+
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+
+
+
+            <div>
+
+
+                <label>
+
+                    Stil
+
+                </label>
+
+
+
+                <select id="video-style">
+
+
+                    <option>
+
+                        Cinematic
+
+                    </option>
+
+
+                    <option>
+
+                        Animation
+
+                    </option>
+
+
+                    <option>
+
+                        Realistic
+
+                    </option>
+
+
+                    <option>
+
+                        Fantasy
+
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <button
+
+            class="btn"
+
+            id="generate-video">
+
+
+            Video Oluştur
+
+
+        </button>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Video List -->
+
+
+    <div class="video-list card">
+
+
+
+        <h3>
+
+            🎞 Videolar
+
+        </h3>
+
+
+
+
+        <div
+
+            id="video-items">
+
+
+
+            <div class="empty-video">
+
+                Henüz video yok
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</div>

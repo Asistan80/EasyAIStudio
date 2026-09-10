@@ -1,0 +1,284 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/pages/dashboard.html
+   Version: 1.0.0
+   Sprint: 9 - Dashboard Screen
+   ========================================================== */
+
+
+<div class="dashboard">
+
+
+    <!-- Header -->
+
+    <div class="dashboard-header">
+
+
+        <div>
+
+            <h2>
+
+                📊 Dashboard
+
+            </h2>
+
+
+            <p>
+
+                Easy AI Studio genel durumu
+
+            </p>
+
+
+        </div>
+
+
+
+        <button class="btn">
+
+            Yenile
+
+        </button>
+
+
+    </div>
+
+
+
+
+    <!-- Statistics -->
+
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+
+            <div class="stat-title">
+
+                AI Modeller
+
+            </div>
+
+
+            <div 
+                class="stat-value"
+                id="model-count">
+
+                0
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="stat-card">
+
+
+            <div class="stat-title">
+
+                Aktif Agent
+
+            </div>
+
+
+            <div 
+                class="stat-value"
+                id="agent-count">
+
+                0
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="stat-card">
+
+
+            <div class="stat-title">
+
+                Oluşturulan Görseller
+
+            </div>
+
+
+            <div 
+                class="stat-value"
+                id="image-count">
+
+                0
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="stat-card">
+
+
+            <div class="stat-title">
+
+                Video İşleri
+
+            </div>
+
+
+            <div 
+                class="stat-value"
+                id="video-count">
+
+                0
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Panels -->
+
+
+    <div class="dashboard-grid">
+
+
+
+        <div class="dashboard-panel">
+
+
+            <h3>
+
+                🤖 AI Durumu
+
+            </h3>
+
+
+
+            <div class="ai-status">
+
+
+                <span class="status-dot"></span>
+
+
+                <span>
+
+                    Sistem aktif
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="dashboard-panel">
+
+
+            <h3>
+
+                ⚡ Hızlı İşlemler
+
+            </h3>
+
+
+
+            <button 
+                class="btn"
+                data-page="chat">
+
+                Yeni Sohbet
+
+            </button>
+
+
+
+            <button 
+                class="btn"
+                data-page="image">
+
+                Görsel Oluştur
+
+            </button>
+
+
+
+            <button 
+                class="btn"
+                data-page="video">
+
+                Video Oluştur
+
+            </button>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="dashboard-panel">
+
+
+            <h3>
+
+                📌 Son Aktiviteler
+
+            </h3>
+
+
+            <div id="activity-list">
+
+
+                <div class="activity-item">
+
+                    Sistem başlatıldı
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    Dashboard hazır
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>

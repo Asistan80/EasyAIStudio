@@ -1,0 +1,361 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/tasks.css
+   Version: 1.0.0
+   Sprint: 9 - Tasks Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Tasks Page
+   ========================================================== */
+
+.tasks-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.tasks-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.tasks-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Queue Status
+   ========================================================== */
+
+.queue-status {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            3,
+
+            1fr
+
+        );
+
+    gap:
+
+        20px;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+
+
+.queue-status div {
+
+    display:
+
+        flex;
+
+    flex-direction:
+
+        column;
+
+    gap:
+
+        10px;
+
+}
+
+
+
+
+
+.queue-status span {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+.queue-status b {
+
+    font-size:
+
+        28px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Tasks Container
+   ========================================================== */
+
+.tasks-container {
+
+    min-height:
+
+        350px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Task Card
+   ========================================================== */
+
+.task-card {
+
+    padding:
+
+        18px;
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        12px;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+.task-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+.task-name {
+
+    font-weight:
+
+        bold;
+
+}
+
+
+
+
+
+.task-status {
+
+    font-size:
+
+        13px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Status
+   ========================================================== */
+
+.status-running {
+
+    color:
+
+        #f59e0b;
+
+}
+
+
+
+.status-completed {
+
+    color:
+
+        #22c55e;
+
+}
+
+
+
+.status-error {
+
+    color:
+
+        #ef4444;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Progress
+   ========================================================== */
+
+.task-progress {
+
+    width:
+
+        100%;
+
+    height:
+
+        8px;
+
+    background:
+
+        #334155;
+
+    border-radius:
+
+        10px;
+
+    overflow:
+
+        hidden;
+
+}
+
+
+
+
+
+.task-progress-bar {
+
+    height:
+
+        100%;
+
+    width:
+
+        0%;
+
+    background:
+
+        #7b5cff;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Empty
+   ========================================================== */
+
+.empty-tasks {
+
+    text-align:
+
+        center;
+
+    padding:
+
+        40px;
+
+    color:
+
+        #64748b;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media(max-width:700px) {
+
+
+    .queue-status {
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+
+}

@@ -1,0 +1,285 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/workflows.css
+   Version: 1.0.0
+   Sprint: 9 - Workflow Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Workflow Page
+   ========================================================== */
+
+.workflows-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.workflows-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.workflows-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Builder
+   ========================================================== */
+
+.workflow-builder {
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+
+
+.workflow-canvas {
+
+    min-height:
+
+        300px;
+
+    margin-top:
+
+        20px;
+
+    padding:
+
+        30px;
+
+    background:
+
+        #0f172a;
+
+    border:
+
+        1px dashed #334155;
+
+    border-radius:
+
+        14px;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    gap:
+
+        25px;
+
+    flex-wrap:
+
+        wrap;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Node
+   ========================================================== */
+
+.workflow-node {
+
+    width:
+
+        150px;
+
+    padding:
+
+        20px;
+
+    text-align:
+
+        center;
+
+    background:
+
+        #1e293b;
+
+    border:
+
+        1px solid #7b5cff;
+
+    border-radius:
+
+        12px;
+
+    cursor:
+
+        pointer;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+
+
+.workflow-node:hover {
+
+    transform:
+
+        translateY(-5px);
+
+}
+
+
+
+
+
+.workflow-node.active {
+
+    background:
+
+        #7b5cff;
+
+    color:
+
+        white;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Workflow List
+   ========================================================== */
+
+.workflow-list {
+
+    margin-top:
+
+        20px;
+
+}
+
+
+
+
+
+.workflow-card {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    padding:
+
+        15px;
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        12px;
+
+    margin-bottom:
+
+        10px;
+
+}
+
+
+
+
+
+.workflow-status {
+
+    color:
+
+        #22c55e;
+
+}
+
+
+
+
+
+.empty-workflow {
+
+    text-align:
+
+        center;
+
+    padding:
+
+        30px;
+
+    color:
+
+        #64748b;
+
+}

@@ -1,0 +1,450 @@
+/* ==========================================================
+   Easy AI Studio
+   Sprint 2 - UI Foundation
+   File: frontend/css/modal.css
+   Version: 1.0.0
+   ========================================================== */
+
+/* ==========================================================
+   Modal Overlay
+   ========================================================== */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:24px;
+
+    background:rgba(10,13,20,.72);
+
+    backdrop-filter:blur(8px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+
+    z-index:10000;
+}
+
+.modal-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+}
+
+/* ==========================================================
+   Modal
+   ========================================================== */
+
+.modal{
+
+    width:100%;
+
+    max-width:640px;
+
+    max-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 24px 60px rgba(0,0,0,.45);
+
+    transform:translateY(24px) scale(.98);
+
+    opacity:0;
+
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.modal-overlay.active .modal{
+
+    transform:translateY(0) scale(1);
+
+    opacity:1;
+}
+
+/* ==========================================================
+   Sizes
+   ========================================================== */
+
+.modal-sm{
+
+    max-width:420px;
+}
+
+.modal-md{
+
+    max-width:640px;
+}
+
+.modal-lg{
+
+    max-width:900px;
+}
+
+.modal-xl{
+
+    max-width:1200px;
+}
+
+.modal-full{
+
+    width:100%;
+
+    max-width:96vw;
+
+    max-height:96vh;
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    padding:22px 24px;
+
+    border-bottom:1px solid var(--color-border);
+
+    flex-shrink:0;
+}
+
+.modal-title{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:var(--color-text);
+}
+
+.modal-subtitle{
+
+    margin-top:4px;
+
+    font-size:13px;
+
+    color:var(--color-text-muted);
+}
+
+/* ==========================================================
+   Close Button
+   ========================================================== */
+
+.modal-close{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:var(--color-text-muted);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition-fast);
+}
+
+.modal-close:hover{
+
+    background:rgba(255,255,255,.06);
+
+    color:var(--color-text);
+}
+
+.modal-close:active{
+
+    transform:scale(.95);
+}
+
+.modal-close svg,
+.modal-close i{
+
+    width:18px;
+
+    height:18px;
+}
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+.modal-body{
+
+    flex:1;
+
+    overflow:auto;
+
+    padding:24px;
+}
+
+.modal-body::-webkit-scrollbar{
+
+    width:10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb{
+
+    background:#374154;
+
+    border-radius:999px;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+.modal-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:20px 24px;
+
+    border-top:1px solid var(--color-border);
+
+    flex-shrink:0;
+}
+
+/* ==========================================================
+   Modal Sections
+   ========================================================== */
+
+.modal-section + .modal-section{
+
+    margin-top:28px;
+}
+
+.modal-section-title{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+    color:var(--color-text);
+}
+
+/* ==========================================================
+   Loading
+   ========================================================== */
+
+.modal-loading{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    padding:50px 20px;
+
+    text-align:center;
+}
+
+/* ==========================================================
+   Confirmation
+   ========================================================== */
+
+.modal-confirm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:18px;
+
+    padding:12px 0;
+}
+
+.modal-confirm-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(79,140,255,.12);
+
+    color:var(--color-primary);
+
+    font-size:28px;
+}
+
+.modal-confirm-title{
+
+    font-size:22px;
+
+    font-weight:600;
+}
+
+.modal-confirm-text{
+
+    max-width:420px;
+
+    color:var(--color-text-light);
+
+    line-height:1.7;
+}
+
+/* ==========================================================
+   Animation
+   ========================================================== */
+
+@keyframes modalFadeIn{
+
+    from{
+
+        opacity:0;
+    }
+
+    to{
+
+        opacity:1;
+    }
+
+}
+
+@keyframes modalPop{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px) scale(.95);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width:768px){
+
+    .modal-overlay{
+
+        padding:16px;
+    }
+
+    .modal{
+
+        max-height:95vh;
+    }
+
+    .modal-header{
+
+        padding:18px;
+    }
+
+    .modal-body{
+
+        padding:18px;
+    }
+
+    .modal-footer{
+
+        padding:18px;
+
+        flex-direction:column;
+    }
+
+    .modal-footer .btn{
+
+        width:100%;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .modal-title{
+
+        font-size:18px;
+    }
+
+    .modal-confirm-title{
+
+        font-size:20px;
+    }
+
+}

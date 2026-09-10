@@ -1,0 +1,237 @@
+/* ==========================================================
+   Easy AI Studio
+   File: frontend/css/plugins.css
+   Version: 1.0.0
+   Sprint: 9 - Plugins Style
+   ========================================================== */
+
+
+/* ==========================================================
+   Plugins Page
+   ========================================================== */
+
+.plugins-page {
+
+    width:
+
+        100%;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.plugins-header {
+
+    display:
+
+        flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:
+
+        center;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+.plugins-header p {
+
+    color:
+
+        #94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Search
+   ========================================================== */
+
+#plugin-search {
+
+    height:
+
+        45px;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Grid
+   ========================================================== */
+
+.plugins-grid {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(
+
+                260px,
+
+                1fr
+
+            )
+
+        );
+
+    gap:
+
+        20px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Plugin Card
+   ========================================================== */
+
+.plugin-card {
+
+    background:
+
+        #151922;
+
+    border:
+
+        1px solid #252b38;
+
+    border-radius:
+
+        14px;
+
+    padding:
+
+        20px;
+
+    transition:
+
+        .3s;
+
+}
+
+
+
+
+
+.plugin-card:hover {
+
+    transform:
+
+        translateY(-5px);
+
+    border-color:
+
+        #7b5cff;
+
+}
+
+
+
+
+
+.plugin-card h3 {
+
+    margin-bottom:
+
+        10px;
+
+}
+
+
+
+
+
+.plugin-card p {
+
+    color:
+
+        #94a3b8;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   Status
+   ========================================================== */
+
+.plugin-status {
+
+    display:
+
+        inline-block;
+
+    padding:
+
+        6px 12px;
+
+    border-radius:
+
+        20px;
+
+    background:
+
+        #1e293b;
+
+    color:
+
+        #22c55e;
+
+    margin-bottom:
+
+        15px;
+
+}
+
+
+
+
+
+.plugin-disabled {
+
+    color:
+
+        #ef4444;
+
+}

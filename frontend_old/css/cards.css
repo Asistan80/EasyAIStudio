@@ -1,0 +1,380 @@
+/* ==========================================================
+   Easy AI Studio
+   Sprint 2 - UI Foundation
+   File: frontend/css/cards.css
+   Version: 1.0.0
+   ========================================================== */
+
+/* ==========================================================
+   Card Grid
+   ========================================================== */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+
+    gap:24px;
+
+    width:100%;
+}
+
+/* ==========================================================
+   Base Card
+   ========================================================== */
+
+.card-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+    box-shadow:var(--shadow-sm);
+}
+
+.card-item:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(79,140,255,.35);
+
+    box-shadow:var(--shadow-md);
+}
+
+/* ==========================================================
+   Card Header
+   ========================================================== */
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    padding:20px 22px;
+
+    border-bottom:1px solid var(--color-border);
+}
+
+.card-title{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--color-text);
+}
+
+.card-subtitle{
+
+    margin-top:4px;
+
+    font-size:13px;
+
+    color:var(--color-text-muted);
+}
+
+/* ==========================================================
+   Card Body
+   ========================================================== */
+
+.card-body{
+
+    flex:1;
+
+    padding:22px;
+}
+
+/* ==========================================================
+   Card Footer
+   ========================================================== */
+
+.card-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    padding:18px 22px;
+
+    border-top:1px solid var(--color-border);
+}
+
+/* ==========================================================
+   Image Card
+   ========================================================== */
+
+.card-image{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    background:#20293a;
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .4s ease;
+}
+
+.card-item:hover .card-image img{
+
+    transform:scale(1.05);
+}
+
+/* ==========================================================
+   Stats Card
+   ========================================================== */
+
+.card-stat{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+.card-stat-value{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:var(--color-text);
+}
+
+.card-stat-label{
+
+    color:var(--color-text-muted);
+
+    font-size:13px;
+}
+
+.card-stat-change{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.card-stat-change.positive{
+
+    color:var(--color-success);
+}
+
+.card-stat-change.negative{
+
+    color:var(--color-danger);
+}
+
+/* ==========================================================
+   Icon Card
+   ========================================================== */
+
+.card-icon{
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:rgba(79,140,255,.12);
+
+    color:var(--color-primary);
+
+    flex-shrink:0;
+}
+
+.card-icon svg,
+.card-icon i{
+
+    width:24px;
+
+    height:24px;
+}
+
+/* ==========================================================
+   Horizontal Card
+   ========================================================== */
+
+.card-horizontal{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.card-horizontal .card-image{
+
+    width:180px;
+
+    min-width:180px;
+
+    aspect-ratio:1;
+
+    border-radius:14px;
+}
+
+/* ==========================================================
+   List Card
+   ========================================================== */
+
+.card-list{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.card-list-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid var(--color-border);
+}
+
+.card-list-item:last-child{
+
+    border-bottom:none;
+}
+
+/* ==========================================================
+   Overlay
+   ========================================================== */
+
+.card-overlay{
+
+    position:relative;
+}
+
+.card-overlay::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.45)
+    );
+
+    pointer-events:none;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width:992px){
+
+    .cards-grid{
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(260px,1fr));
+    }
+
+}
+
+@media (max-width:768px){
+
+    .card-horizontal{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .card-horizontal .card-image{
+
+        width:100%;
+
+        min-width:100%;
+
+        aspect-ratio:16/9;
+    }
+
+    .card-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .cards-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .card-header,
+
+    .card-body,
+
+    .card-footer{
+
+        padding:18px;
+    }
+
+}
