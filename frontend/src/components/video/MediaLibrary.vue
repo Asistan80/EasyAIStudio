@@ -172,6 +172,39 @@ MEDIA
 ==========================================================
 */
 
+function getMediaCategory(item) {
+
+    const mime = String(item?.type || "").toLowerCase();
+    const name = String(item?.name || item?.filename || "").toLowerCase();
+
+    if (mime === "image/gif" || name.endsWith(".gif")) {
+        return "gif";
+    }
+
+    if (mime.startsWith("video/")) {
+        return "video";
+    }
+
+    if (mime.startsWith("image/")) {
+        return "image";
+    }
+
+    if (mime.startsWith("audio/")) {
+        return "audio";
+    }
+
+    if (
+        mime.includes("subtitle") ||
+        name.endsWith(".srt") ||
+        name.endsWith(".vtt") ||
+        name.endsWith(".ass")
+    ) {
+        return "subtitle";
+    }
+
+    return mime;
+}
+
 const media = computed(() => {
 
     return videoStore.media;
@@ -232,7 +265,7 @@ const filteredMedia = computed(() => {
 
                 item =>
 
-                item.type ===
+                getMediaCategory(item) ===
 
                 selectedCategory.value
 

@@ -3024,10 +3024,10 @@ async function downloadExportFile(outputPath, filename) {
             throw new Error("Downloaded export file is empty.");
         }
 
-                if (selectedDirectoryHandle) {
+        if (selectedDirectoryHandle) {
             try {
                 const permission =
-                    await selectedDirectoryHandle.requestPermission(
+                    await selectedDirectoryHandle.queryPermission(
                         { mode: "readwrite" }
                     );
 
@@ -3517,6 +3517,12 @@ async function downloadExportFile(outputPath, filename) {
          * supported and keep the actual directory handle
          * so we can write the exported file directly into
          * it later (not just display its name).
+         *
+         * The write permission is requested right here,
+         * while we still have an active user gesture from
+         * the click that triggered this function -
+         * requesting it later (e.g. after export finishes)
+         * can be silently denied by the browser.
          */
         if (
             typeof window !== "undefined" &&
@@ -3529,9 +3535,29 @@ async function downloadExportFile(outputPath, filename) {
                 const handle =
                     await window.showDirectoryPicker();
 
-                selectedDirectoryHandle = handle || null;
+                if (!handle) {
+                    return "";
+                }
 
-                return handle?.name || "";
+                const permission =
+                    await handle.requestPermission(
+                        { mode: "readwrite" }
+                    );
+
+                if (permission !== "granted") {
+
+                    selectedDirectoryHandle = null;
+
+                    console.warn(
+                        "Write permission for the selected folder was not granted."
+                    );
+
+                    return "";
+                }
+
+                selectedDirectoryHandle = handle;
+
+                return handle.name || "";
 
             } catch (error) {
 
