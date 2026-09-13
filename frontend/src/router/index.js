@@ -8,6 +8,7 @@ import Gallery from "../views/Gallery.vue";
 import GifStudio from "../views/GifStudio.vue";
 import ChatView from "../views/ChatView.vue";
 import VideoStudioView from "../views/video/VideoStudioView.vue";
+import AiVideoGeneration from "../views/AiVideoGeneration.vue";
 
 const routes = [
 
@@ -58,6 +59,16 @@ const routes = [
                 component: GifStudio,
 
             },
+
+            {
+
+                path: "ai-video",
+
+                name: "AI Video",
+
+                component: AiVideoGeneration,
+
+            },    
 
             {
 

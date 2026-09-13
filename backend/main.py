@@ -17,6 +17,7 @@ from core.logger import logger
 from middleware.error_handler import ErrorHandlerMiddleware
 from middleware.request_logger import RequestLoggerMiddleware
 from services.bootstrap import bootstrap
+from services.provider_service import provider_service
 
 
 app = FastAPI(
@@ -80,6 +81,8 @@ app.mount(
 
 @app.on_event("startup")
 async def startup():
+
+    await provider_service.initialize()
 
     result = bootstrap()
 

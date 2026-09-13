@@ -2830,7 +2830,12 @@ async function resolveExportInput() {
                 mediaItem.output &&
                 !/^https?:\/\//i.test(mediaItem.output)
             ) {
-                inputPath = mediaItem.output;
+                inputPath =
+                    mediaItem.filename ||
+                    String(mediaItem.output)
+                        .split(/[\\/]/)
+                        .pop();
+            
             }
 
             // Previously uploaded backend file

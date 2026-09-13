@@ -30,6 +30,12 @@ const menu = [
     },
 
     {
+        icon: "🤖",
+        title: "AI Video",
+        path: "/ai-video",
+    },
+
+    {
        icon: "🎬",
        title: "Video Studio",
        path: "/video",

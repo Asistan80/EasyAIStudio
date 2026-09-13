@@ -5229,3 +5229,55 @@ ValueError: Provider 'ComfyUI' not found.
 [2026-09-10 12:25:27] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.88ms
 [2026-09-10 12:25:28] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.85ms
 [2026-09-10 12:25:28] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_Render_20260910_122523.mp4 200 0.81ms
+[2026-09-10 14:37:05] [INFO] [EasyAIStudio] GET /api/videos 307 1.34ms
+[2026-09-10 14:37:05] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.96ms
+[2026-09-10 14:37:08] [INFO] [EasyAIStudio] GET /api/videos 307 0.49ms
+[2026-09-10 14:37:08] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.78ms
+[2026-09-10 14:37:08] [INFO] [EasyAIStudio] GET /api/videos 307 0.43ms
+[2026-09-10 14:37:08] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.64ms
+[2026-09-10 14:37:08] [INFO] [EasyAIStudio] GET /api/videos 307 0.64ms
+[2026-09-10 14:37:08] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.58ms
+[2026-09-10 14:37:09] [INFO] [EasyAIStudio] GET /api/videos 307 0.46ms
+[2026-09-10 14:37:09] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.56ms
+[2026-09-10 14:45:43] [INFO] [EasyAIStudio] GET /api/videos 307 0.44ms
+[2026-09-10 14:45:43] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.77ms
+[2026-09-10 14:49:27] [INFO] [EasyAIStudio] GET /api/videos 307 0.37ms
+[2026-09-10 14:49:27] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.81ms
+[2026-09-10 14:49:35] [INFO] [EasyAIStudio] GET /api/videos 307 0.67ms
+[2026-09-10 14:49:35] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.83ms
+[2026-09-10 14:49:37] [INFO] [EasyAIStudio] GET /api/videos 307 0.52ms
+[2026-09-10 14:49:37] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.92ms
+[2026-09-10 14:49:39] [INFO] [EasyAIStudio] GET /api/videos 307 0.59ms
+[2026-09-10 14:49:39] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.66ms
+[2026-09-10 14:50:38] [INFO] [EasyAIStudio] POST /api/files/upload 200 14.71ms
+[2026-09-10 14:50:38] [INFO] [EasyAIStudio] POST /api/files/upload 200 14.85ms
+[2026-09-10 14:50:38] [INFO] [EasyAIStudio] OPTIONS /api/videos/export 200 0.16ms
+[2026-09-10 14:50:38] [INFO] [EasyAIStudio] POST /api/videos/export 200 215.54ms
+[2026-09-10 14:50:38] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.92ms
+[2026-09-10 14:50:39] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.85ms
+[2026-09-10 14:50:39] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.20ms
+[2026-09-10 14:50:40] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.68ms
+[2026-09-10 14:50:40] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.09ms
+[2026-09-10 14:50:41] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.96ms
+[2026-09-10 14:50:41] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.78ms
+[2026-09-10 14:50:42] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.86ms
+[2026-09-10 14:50:42] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.63ms
+[2026-09-10 14:50:43] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.97ms
+[2026-09-10 14:50:43] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_Render_20260910_145038.mp4 200 1.66ms
+[2026-09-13 21:53:59] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-13 21:53:59] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-13 21:53:59] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-13 21:53:59] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-13 21:53:59] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery 200 87.18ms
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery/7be6bc397be34bde9bfc1a26a30ff60e.png 200 30.93ms
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery/526867194fd640a9b4042cc32588838b.png 200 5.88ms
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery/dec2f35506c142a18ae6c8f1dacec0b9.png 200 5.99ms
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery/db08a2f1721b496baf54502fc9e9542c.png 200 6.05ms
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery/0d1f6dea9bed4dae8d026897d2590e6e.png 200 6.15ms
+[2026-09-13 21:57:05] [INFO] [EasyAIStudio] GET /api/gallery/bb4ec04be5ab4c89a5e00eee5d303f0d.png 200 6.34ms
+[2026-09-13 21:58:37] [INFO] [EasyAIStudio] OPTIONS /api/videos/generate 200 0.13ms
+[2026-09-13 21:58:37] [INFO] [EasyAIStudio] POST /api/videos/generate 200 12.52ms
+[2026-09-13 21:58:46] [INFO] [EasyAIStudio] POST /api/videos/generate 200 0.95ms
+[2026-09-13 21:58:47] [INFO] [EasyAIStudio] POST /api/videos/generate 200 0.82ms
+[2026-09-13 22:00:41] [INFO] [EasyAIStudio] POST /api/videos/generate 200 1.07ms
