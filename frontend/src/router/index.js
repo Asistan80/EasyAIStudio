@@ -9,6 +9,7 @@ import GifStudio from "../views/GifStudio.vue";
 import ChatView from "../views/ChatView.vue";
 import VideoStudioView from "../views/video/VideoStudioView.vue";
 import AiVideoGeneration from "../views/AiVideoGeneration.vue";
+import AiSoundGeneration from "../views/AiSoundGeneration.vue";
 
 const routes = [
 
@@ -22,11 +23,11 @@ const routes = [
 
             {
 
-                path: "",
+                path: "ai-sound",
 
-                name: "Dashboard",
+                name: "AI Sound",
 
-                component: Dashboard,
+                component: AiSoundGeneration,
 
             },
 

@@ -605,6 +605,168 @@ const exportProgressListeners = new Set();
         return item;
     }
 
+    async function addRemoteAudio(audioData) {
+
+        if (!audioData) {
+            return null;
+        }
+
+        const filename =
+            audioData.filename ||
+            (
+                audioData.output
+                    ? audioData.output.split(/[\\/]/).pop()
+                    : ""
+            );
+
+        if (!filename) {
+            return null;
+        }
+
+        const existing = media.value.find(
+            item =>
+                item.filename === filename ||
+                item.name === filename
+        );
+
+        if (existing) {
+            return existing;
+        }
+
+        const output =
+            audioData.output || "";
+
+        let url = output;
+
+        if (
+            output &&
+            !output.startsWith("http://") &&
+            !output.startsWith("https://") &&
+            !output.startsWith("blob:")
+        ) {
+            url =
+    "http://127.0.0.1:8000" +
+    (output.startsWith("/") ? "" : "/") +
+    output;
+        }
+
+        const item = {
+            id: nextMediaId++,
+            name: filename,
+            filename,
+            output,
+            type: "audio/mpeg",
+            source: "backend",
+            provider:
+                audioData.provider || "ElevenLabs",
+            url,
+            thumbnail: "",
+            duration:
+                Number(audioData.duration) || 0,
+            width: 0,
+            height: 0,
+            fps: 0,
+            frames: null,
+            size:
+                Number(audioData.size) || 0,
+            prompt:
+                audioData.prompt || "",
+            status: "completed",
+            createdAt:
+                audioData.created_at
+                    ? new Date(audioData.created_at)
+                    : new Date(),
+            file: null
+        };
+
+        media.value.push(item);
+
+        saveHistory();
+
+        return item;
+    }
+
+    async function addRemoteAudio(audioData) {
+
+        if (!audioData) {
+            return null;
+        }
+
+        const filename =
+            audioData.filename ||
+            (
+                audioData.output
+                    ? audioData.output.split(/[\\/]/).pop()
+                    : ""
+            );
+
+        if (!filename) {
+            return null;
+        }
+
+        const existing = media.value.find(
+            item =>
+                item.filename === filename ||
+                item.name === filename
+        );
+
+        if (existing) {
+            return existing;
+        }
+
+        const output =
+            audioData.output || "";
+
+        let url = output;
+
+        if (
+            output &&
+            !output.startsWith("http://") &&
+            !output.startsWith("https://") &&
+            !output.startsWith("blob:")
+        ) {
+            url =
+    "http://127.0.0.1:8000" +
+    (output.startsWith("/") ? "" : "/") +
+    output;
+        }
+
+        const item = {
+            id: nextMediaId++,
+            name: filename,
+            filename,
+            output,
+            type: "audio/mpeg",
+            source: "backend",
+            provider:
+                audioData.provider || "ElevenLabs",
+            url,
+            thumbnail: "",
+            duration:
+                Number(audioData.duration) || 0,
+            width: 0,
+            height: 0,
+            fps: 0,
+            frames: null,
+            size:
+                Number(audioData.size) || 0,
+            prompt:
+                audioData.prompt || "",
+            status: "completed",
+            createdAt:
+                audioData.created_at
+                    ? new Date(audioData.created_at)
+                    : new Date(),
+            file: null
+        };
+
+        media.value.push(item);
+
+        saveHistory();
+
+        return item;
+    }
+
     async function loadBackendVideos() {
 
         try {
@@ -4260,8 +4422,9 @@ async function downloadExportFile(outputPath, filename) {
         openImportDialog,
         loadBackendVideos,
         loadBackendMedia:
-            loadBackendVideos,
+        loadBackendVideos,
         addRemoteVideo,
+        addRemoteAudio,
 
         /*
         TRACKS

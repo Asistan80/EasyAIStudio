@@ -5281,3 +5281,118 @@ ValueError: Provider 'ComfyUI' not found.
 [2026-09-13 21:58:46] [INFO] [EasyAIStudio] POST /api/videos/generate 200 0.95ms
 [2026-09-13 21:58:47] [INFO] [EasyAIStudio] POST /api/videos/generate 200 0.82ms
 [2026-09-13 22:00:41] [INFO] [EasyAIStudio] POST /api/videos/generate 200 1.07ms
+[2026-09-13 22:05:27] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-13 22:05:27] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-13 22:05:27] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-13 22:05:27] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-13 22:05:27] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-13 22:15:25] [INFO] [EasyAIStudio] POST /api/videos/generate 200 568840.19ms
+[2026-09-13 22:17:13] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_00007_.mp4 206 48.00ms
+[2026-09-13 22:17:32] [INFO] [EasyAIStudio] GET /api/videos 307 0.61ms
+[2026-09-13 22:17:32] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.95ms
+[2026-09-13 22:18:26] [INFO] [EasyAIStudio] OPTIONS /api/videos/export 200 0.13ms
+[2026-09-13 22:18:26] [INFO] [EasyAIStudio] POST /api/videos/export 404 47.68ms
+[2026-09-13 22:18:54] [INFO] [EasyAIStudio] POST /api/videos/export 404 27.92ms
+[2026-09-13 22:19:04] [INFO] [EasyAIStudio] POST /api/videos/export 404 29.88ms
+[2026-09-13 22:19:39] [INFO] [EasyAIStudio] POST /api/videos/export 404 28.21ms
+[2026-09-13 22:19:58] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_00007_.mp4 304 0.97ms
+[2026-09-13 22:20:13] [INFO] [EasyAIStudio] POST /api/videos/export 404 28.01ms
+[2026-09-13 22:24:44] [INFO] [EasyAIStudio] GET /api/videos 307 0.57ms
+[2026-09-13 22:24:44] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.66ms
+[2026-09-13 22:24:47] [INFO] [EasyAIStudio] GET /api/videos 307 0.52ms
+[2026-09-13 22:24:47] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.72ms
+[2026-09-13 22:24:48] [INFO] [EasyAIStudio] GET /api/videos 307 0.76ms
+[2026-09-13 22:24:48] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.56ms
+[2026-09-13 22:24:50] [INFO] [EasyAIStudio] GET /api/videos 307 0.66ms
+[2026-09-13 22:24:50] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.77ms
+[2026-09-13 22:24:51] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_00007_.mp4 304 1.15ms
+[2026-09-13 22:25:01] [INFO] [EasyAIStudio] POST /api/videos/export 200 177.31ms
+[2026-09-13 22:25:02] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.56ms
+[2026-09-13 22:25:02] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.83ms
+[2026-09-13 22:25:03] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.63ms
+[2026-09-13 22:25:03] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.71ms
+[2026-09-13 22:25:04] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.56ms
+[2026-09-13 22:25:04] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.90ms
+[2026-09-13 22:25:04] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_Render_20260913_222501.mp4 200 0.98ms
+[2026-09-13 22:54:33] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-13 22:54:33] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-13 22:54:33] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-13 22:54:33] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-13 22:54:33] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-13 22:55:11] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-13 22:55:11] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-13 22:55:11] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-13 22:55:11] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-13 22:55:11] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-15 15:34:53] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-15 15:34:53] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-15 15:34:53] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-15 15:34:53] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-15 15:34:53] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-15 15:35:10] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-15 15:35:10] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-15 15:35:10] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-15 15:35:10] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-15 15:35:10] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-16 09:13:08] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-16 09:13:08] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-16 09:13:08] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-16 09:13:08] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-16 09:13:08] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-16 13:25:09] [INFO] [EasyAIStudio] GET /api/videos 307 13.86ms
+[2026-09-16 13:25:09] [INFO] [EasyAIStudio] GET /api/videos/ 200 13.14ms
+[2026-09-16 13:25:17] [INFO] [EasyAIStudio] GET /api/videos 307 0.97ms
+[2026-09-16 13:25:17] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.66ms
+[2026-09-16 13:26:07] [INFO] [EasyAIStudio] OPTIONS /api/audio/generate-sfx 200 0.13ms
+[2026-09-16 13:26:08] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 784.72ms
+[2026-09-16 13:31:24] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 607.18ms
+[2026-09-16 13:32:35] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-16 13:32:35] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-16 13:32:35] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-16 13:32:35] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-16 13:32:35] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-16 13:32:48] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2638.04ms
+[2026-09-16 13:32:48] [INFO] [EasyAIStudio] GET /exports/sfx_ku_c_v_lt_s_abad31d6.mp3 206 27.75ms
+[2026-09-16 13:32:50] [INFO] [EasyAIStudio] GET /api/videos 307 0.35ms
+[2026-09-16 13:32:50] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.93ms
+[2026-09-16 13:33:01] [INFO] [EasyAIStudio] GET /api/videos 307 0.51ms
+[2026-09-16 13:33:01] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.35ms
+[2026-09-16 13:33:03] [INFO] [EasyAIStudio] GET /exports/sfx_ku_c_v_lt_s_abad31d6.mp3 304 1.09ms
+[2026-09-16 14:16:59] [INFO] [EasyAIStudio] OPTIONS /api/audio/generate-sfx 200 0.76ms
+[2026-09-16 14:17:01] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2506.67ms
+[2026-09-16 14:17:01] [INFO] [EasyAIStudio] GET /exports/sfx_kap_sesi_55792212.mp3 206 1.41ms
+[2026-09-16 14:17:04] [INFO] [EasyAIStudio] GET /exports/sfx_kap_sesi_55792212.mp3 304 1.27ms
+[2026-09-16 14:17:23] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2452.26ms
+[2026-09-16 14:17:23] [INFO] [EasyAIStudio] GET /exports/sfx_ku_sesi_d3eaecc5.mp3 206 1.01ms
+[2026-09-16 14:17:24] [INFO] [EasyAIStudio] GET /exports/sfx_ku_sesi_d3eaecc5.mp3 304 1.12ms
+[2026-09-16 14:26:46] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-16 14:26:46] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-16 14:26:46] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-16 14:26:46] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-16 14:26:46] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-16 14:31:07] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-16 14:31:07] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-16 14:31:07] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-16 14:31:07] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-16 14:31:07] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-16 14:31:23] [INFO] [EasyAIStudio] OPTIONS /api/audio/generate-sfx 200 0.19ms
+[2026-09-16 14:31:26] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2610.21ms
+[2026-09-16 14:31:26] [INFO] [EasyAIStudio] GET /exports/sfx_ku_sesi_1010ac87.mp3 206 31.94ms
+[2026-09-16 14:31:31] [INFO] [EasyAIStudio] GET /exports/sfx_ku_sesi_1010ac87.mp3 304 1.02ms
+[2026-09-16 14:31:51] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2340.95ms
+[2026-09-16 14:31:51] [INFO] [EasyAIStudio] GET /exports/sfx_kap_sesi_35674d5f.mp3 206 1.20ms
+[2026-09-16 14:31:59] [INFO] [EasyAIStudio] GET /exports/sfx_kap_sesi_35674d5f.mp3 304 1.01ms
+[2026-09-16 14:32:36] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2408.92ms
+[2026-09-16 14:32:36] [INFO] [EasyAIStudio] GET /exports/sfx_r_zgar_sesi_23586dd4.mp3 206 1.29ms
+[2026-09-16 14:32:41] [INFO] [EasyAIStudio] GET /exports/sfx_r_zgar_sesi_23586dd4.mp3 304 0.95ms
+[2026-09-16 14:33:32] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2326.13ms
+[2026-09-16 14:33:32] [INFO] [EasyAIStudio] GET /exports/sfx_ah_ap_bir_kap_n_n_g_c_rdayarak_yava_a_a_98871e83.mp3 206 1.07ms
+[2026-09-16 14:33:34] [INFO] [EasyAIStudio] GET /exports/sfx_ah_ap_bir_kap_n_n_g_c_rdayarak_yava_a_a_98871e83.mp3 304 1.11ms
+[2026-09-16 14:34:05] [INFO] [EasyAIStudio] POST /api/audio/generate-sfx 200 2244.41ms
+[2026-09-16 14:34:05] [INFO] [EasyAIStudio] GET /exports/sfx_u_an_bir_ku_un_havada_u_arken_kard_ses_bd78e32e.mp3 206 1.44ms
+[2026-09-16 14:34:08] [INFO] [EasyAIStudio] GET /exports/sfx_u_an_bir_ku_un_havada_u_arken_kard_ses_bd78e32e.mp3 304 1.05ms
+[2026-09-16 15:03:24] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-16 15:03:24] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-16 15:03:24] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-16 15:03:24] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-16 15:03:24] [INFO] [EasyAIStudio] Services  : 10

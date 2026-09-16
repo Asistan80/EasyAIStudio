@@ -36,6 +36,12 @@ const menu = [
     },
 
     {
+        icon: "🔊",
+        title: "AI Sound",
+        path: "/ai-sound",
+    },
+
+    {
        icon: "🎬",
        title: "Video Studio",
        path: "/video",

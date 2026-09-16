@@ -23,7 +23,7 @@ from api.endpoints.tasks import router as tasks_router
 from api.endpoints.videos import router as videos_router
 from api.endpoints.workflows import router as workflows_router
 from api.endpoints.gallery import router as gallery_router
-
+from api.endpoints.audio import router as audio_router
 
 api_router = APIRouter(
 
@@ -174,5 +174,15 @@ api_router.include_router(
     prefix="/plugins",
 
     tags=["Plugins"]
+
+)
+
+api_router.include_router(
+
+    audio_router,
+
+    prefix="/audio",
+
+    tags=["Audio"]
 
 )

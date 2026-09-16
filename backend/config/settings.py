@@ -122,6 +122,12 @@ class Settings(BaseSettings):
     )
 
     #
+    # ElevenLabs
+    #
+
+    ELEVENLABS_API_KEY: str = ""
+
+    #
     # Environment / Settings
     #
 

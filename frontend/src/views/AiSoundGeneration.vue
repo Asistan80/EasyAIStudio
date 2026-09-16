@@ -7,34 +7,24 @@ const router = useRouter();
 const videoStore = useVideoStore();
 
 const prompt = ref("");
-const negativePrompt = ref("");
-
-const orientation = ref("landscape");
 
 const durationOptions = [
-    { label: "10 sn", value: 10 },
-    { label: "30 sn", value: 30 },
-    { label: "1 dk", value: 60 },
-    { label: "5 dk", value: 300 }
+    { label: "Otomatik", value: null },
+    { label: "2 sn", value: 2 },
+    { label: "3 sn", value: 3 },
+    { label: "5 sn", value: 5 },
+    { label: "10 sn", value: 10 }
 ];
 
-const duration = ref(10);
+const duration = ref(3);
+const promptInfluence = ref(0.5);
 
 const loading = ref(false);
 const errorMessage = ref("");
 const successMessage = ref("");
-const generatedVideo = ref(null);
+const generatedSound = ref(null);
 
-function orientationSize(value) {
-
-    if (value === "portrait") {
-        return { width: 480, height: 832 };
-    }
-
-    return { width: 832, height: 480 };
-}
-
-async function generateVideo() {
+async function generateSound() {
 
     if (!prompt.value.trim()) {
         errorMessage.value = "Lütfen bir prompt girin.";
@@ -44,54 +34,48 @@ async function generateVideo() {
     loading.value = true;
     errorMessage.value = "";
     successMessage.value = "";
-    generatedVideo.value = null;
-
-    const size = orientationSize(orientation.value);
+    generatedSound.value = null;
 
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/videos/generate",
+            "http://127.0.0.1:8000/api/audio/generate-sfx",
             {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    provider: "ComfyUI",
+               body: JSON.stringify({
                     prompt: prompt.value,
-                    negative_prompt: negativePrompt.value,
-                    duration: Number(duration.value),
-                    fps: 16,
-                    width: size.width,
-                    height: size.height
+                    duration: duration.value,
+                    prompt_influence: promptInfluence.value
                 })
             }
         );
 
         const data = await response.json();
 
-        if (!response.ok || !data.success || !data.video) {
+        if (!response.ok || !data.success) {
             throw new Error(
                 data?.message ||
-                "Video üretimi başarısız oldu."
+                "Ses efekti üretimi başarısız oldu."
             );
         }
 
-        generatedVideo.value = data.video;
+        generatedSound.value = data;
 
-        await videoStore.addRemoteVideo(data.video);
+        await videoStore.addRemoteAudio(data);
 
         successMessage.value =
-            "Video üretildi ve Video Studio'ya eklendi.";
+            "Ses efekti üretildi ve Video Studio'ya eklendi.";
 
     } catch (error) {
 
-        console.error("AI Video Generation Error:", error);
+        console.error("AI Sound Generation Error:", error);
 
         errorMessage.value =
             error?.message ||
-            "Video üretimi sırasında bir hata oluştu.";
+            "Ses üretimi sırasında bir hata oluştu.";
 
     } finally {
 
@@ -108,10 +92,10 @@ function goToVideoStudio() {
 
 <div class="page">
 
-    <h1>🤖 AI Video Generation</h1>
+    <h1>🔊 AI Sound Effects</h1>
 
     <p class="subtitle">
-        Prompt yazarak video üret, otomatik olarak Video Studio'ya eklenir.
+        Kuş sesi, kapı sesi, rüzgar sesi gibi ortam seslerini metinden üret.
     </p>
 
     <div class="layout">
@@ -124,47 +108,8 @@ function goToVideoStudio() {
 
                 <textarea
                     v-model="prompt"
-                    placeholder="Üretmek istediğin videoyu tarif et..."
+                    placeholder="Örn: kuş cıvıltısı, kapı gıcırtısı, rüzgar esintisi..."
                 />
-
-            </div>
-
-            <div class="group">
-
-                <label>Negative Prompt</label>
-
-                <textarea
-                    v-model="negativePrompt"
-                    placeholder="İstemediğin şeyler..."
-                />
-
-            </div>
-
-            <div class="group">
-
-                <label>Yön</label>
-
-                <div class="toggle-row">
-
-                    <button
-                        type="button"
-                        class="toggle-btn"
-                        :class="{ active: orientation === 'landscape' }"
-                        @click="orientation = 'landscape'"
-                    >
-                        🖥️ Yatay
-                    </button>
-
-                    <button
-                        type="button"
-                        class="toggle-btn"
-                        :class="{ active: orientation === 'portrait' }"
-                        @click="orientation = 'portrait'"
-                    >
-                        📱 Dikey
-                    </button>
-
-                </div>
 
             </div>
 
@@ -176,7 +121,7 @@ function goToVideoStudio() {
 
                     <button
                         v-for="option in durationOptions"
-                        :key="option.value"
+                        :key="option.label"
                         type="button"
                         class="toggle-btn"
                         :class="{ active: duration === option.value }"
@@ -187,12 +132,24 @@ function goToVideoStudio() {
 
                 </div>
 
-                <p
-                    v-if="duration > 10"
-                    class="hint"
-                >
-                    Not: Yerel modeller uzun sürelerde daha yavaş çalışır ve
-                    kalite düşebilir, denemekte fayda var.
+            </div>
+
+            <div class="group">
+
+                <label>
+                    Prompt Sadakati: {{ promptInfluence }}
+                </label>
+
+                <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    v-model.number="promptInfluence"
+                />
+
+                <p class="hint">
+                    Düşük: daha yaratıcı/rastgele — Yüksek: prompt'a daha sadık
                 </p>
 
             </div>
@@ -200,9 +157,9 @@ function goToVideoStudio() {
             <button
                 class="generate-btn"
                 :disabled="loading"
-                @click="generateVideo"
+                @click="generateSound"
             >
-                {{ loading ? "Üretiliyor..." : "🚀 Video Üret" }}
+                {{ loading ? "Üretiliyor..." : "🚀 Ses Üret" }}
             </button>
 
             <p
@@ -228,17 +185,17 @@ function goToVideoStudio() {
                 class="preview-placeholder"
             >
                 <div class="spinner"></div>
-                <p>Video üretiliyor, bu biraz sürebilir...</p>
+                <p>Ses üretiliyor...</p>
             </div>
 
             <div
-                v-else-if="generatedVideo && generatedVideo.output"
+                v-else-if="generatedSound && generatedSound.output"
                 class="preview-result"
             >
-                <video
-                    :src="'http://127.0.0.1:8000' + generatedVideo.output"
+                <audio
+                    :src="'http://127.0.0.1:8000' + generatedSound.output"
                     controls
-                    class="preview-video"
+                    class="preview-audio"
                 />
 
                 <button
@@ -254,7 +211,7 @@ function goToVideoStudio() {
                 v-else
                 class="preview-placeholder"
             >
-                <p>Üretilen video burada görünecek.</p>
+                <p>Üretilen ses burada görünecek.</p>
             </div>
 
         </div>
@@ -347,12 +304,6 @@ textarea {
     color: white;
 }
 
-.hint {
-    font-size: 12px;
-    color: #9ca3af;
-    margin: 0;
-}
-
 .generate-btn {
     margin-top: 6px;
     height: 52px;
@@ -392,7 +343,7 @@ textarea {
     border: 1px solid #2d3648;
     border-radius: 14px;
     padding: 24px;
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -429,10 +380,8 @@ textarea {
     width: 100%;
 }
 
-.preview-video {
+.preview-audio {
     width: 100%;
-    border-radius: 10px;
-    background: black;
 }
 
 .studio-btn {
