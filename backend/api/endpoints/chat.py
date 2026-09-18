@@ -140,8 +140,17 @@ async def send_message(data: dict):
 
         if normalized_provider == "Ollama":
 
+            recent_history = CHAT_HISTORY[-10:]
+
+            context_lines = [
+                f"{item['role']}: {item['content']}"
+                for item in recent_history
+            ]
+
+            full_prompt = "\n".join(context_lines)
+
             answer = await provider.generate_text(
-                prompt=message_text,
+                prompt=full_prompt,
                 model=model
             )
 

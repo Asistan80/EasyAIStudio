@@ -12,13 +12,14 @@ const negativePrompt = ref("");
 const orientation = ref("landscape");
 
 const durationOptions = [
+    { label: "5 sn", value: 5 },
     { label: "10 sn", value: 10 },
     { label: "30 sn", value: 30 },
     { label: "1 dk", value: 60 },
     { label: "5 dk", value: 300 }
 ];
 
-const duration = ref(10);
+const duration = ref(5);
 
 const loading = ref(false);
 const errorMessage = ref("");

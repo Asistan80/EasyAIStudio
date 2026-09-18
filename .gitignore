@@ -1,3 +1,7 @@
 backend/ffmpeg/bin/ffmpeg.exe
 temp/render/
 .env
+exports/*.mp4
+exports/*.mp3
+exports/*.gif
+exports/*.png

@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import MainLayout from "../layouts/MainLayout.vue";
-
 import Dashboard from "../views/Dashboard.vue";
-import ImageGeneration from "../views/ImageGeneration.vue";
 import Gallery from "../views/Gallery.vue";
 import GifStudio from "../views/GifStudio.vue";
 import ChatView from "../views/ChatView.vue";
@@ -37,7 +35,7 @@ const routes = [
 
                 name: "Images",
 
-                component: ImageGeneration,
+                component: Dashboard,
 
             },
 

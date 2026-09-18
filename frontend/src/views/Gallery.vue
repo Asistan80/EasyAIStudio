@@ -146,19 +146,19 @@
 
     </button>
 
-    <a
+    <button
+
+        type="button"
 
         class="download-btn"
 
-        :href="imageUrl(image)"
-
-        :download="image.filename"
+        @click="downloadImage(image)"
 
     >
 
         Download
 
-    </a>
+    </button>
 
     <button
 
@@ -292,6 +292,35 @@ function imageUrl(image){
 
     return API+"/api/gallery/"+image.filename;
 
+}
+
+async function downloadImage(image) {
+
+    try {
+
+        const response = await fetch(imageUrl(image));
+
+        const blob = await response.blob();
+
+        const blobUrl = URL.createObjectURL(blob);
+
+        const link = document.createElement("a");
+        link.href = blobUrl;
+        link.download = image.filename || "image.png";
+        link.style.display = "none";
+
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        setTimeout(() => {
+            URL.revokeObjectURL(blobUrl);
+        }, 1000);
+
+    } catch (error) {
+
+        console.error("Image download error:", error);
+    }
 }
 
 function preview(image){
