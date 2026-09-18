@@ -5,6 +5,7 @@ import FrameList from "../components/gif/FrameList.vue";
 import PreviewPanel from "../components/gif/PreviewPanel.vue";
 import SettingsPanel from "../components/gif/SettingsPanel.vue";
 import Timeline from "../components/gif/Timeline.vue";
+import AutoGifPanel from "../components/gif/AutoGifPanel.vue";
 
 const frames = ref([]);
 
@@ -25,39 +26,49 @@ function handleFramesUpdated(list) {
 
 <template>
 
-<div class="gif-layout">
+<div class="gif-page">
 
-    <div class="left">
+    <div class="auto-section">
 
-        <FrameList
-
-            @frame-selected="handleFrameSelected"
-
-            @frames-updated="handleFramesUpdated"
-
-        />
+        <AutoGifPanel />
 
     </div>
 
-    <div class="center">
+    <div class="gif-layout">
 
-        <PreviewPanel
+        <div class="left">
 
-            :selected-frame="selectedFrame"
+            <FrameList
 
-        />
+                @frame-selected="handleFrameSelected"
 
-    </div>
+                @frames-updated="handleFramesUpdated"
 
-    <div class="right">
+            />
 
-        <SettingsPanel />
+        </div>
 
-    </div>
+        <div class="center">
 
-    <div class="bottom">
+            <PreviewPanel
 
-        <Timeline />
+                :selected-frame="selectedFrame"
+
+            />
+
+        </div>
+
+        <div class="right">
+
+            <SettingsPanel />
+
+        </div>
+
+        <div class="bottom">
+
+            <Timeline />
+
+        </div>
 
     </div>
 
@@ -67,10 +78,28 @@ function handleFramesUpdated(list) {
 
 <style scoped>
 
+.gif-page{
+
+display:flex;
+flex-direction:column;
+gap:16px;
+
+height:100%;
+
+}
+
+.auto-section{
+
+background:#1b2230;
+border:1px solid #2d3648;
+border-radius:12px;
+
+}
+
 .gif-layout{
 
 width:100%;
-height:100%;
+flex:1;
 
 display:grid;
 
@@ -103,3 +132,4 @@ grid-column:1 / span 3;
 }
 
 </style>
+
