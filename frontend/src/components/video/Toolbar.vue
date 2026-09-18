@@ -1,6 +1,11 @@
 <script setup>
 
 import { ref } from "vue";
+import { useVideoStore } from "../../stores/videoStore";
+
+const videoStore = useVideoStore();
+
+const fileInput = ref(null);
 
 
 /*
@@ -21,6 +26,76 @@ PROJECT
 */
 
 const projectName = ref("Untitled Video");
+
+
+function saveProject() {
+
+    const snapshot = videoStore.createSnapshot();
+
+    const json = JSON.stringify(snapshot, null, 2);
+
+    const blob = new Blob(
+        [json],
+        { type: "application/json" }
+    );
+
+    const blobUrl = URL.createObjectURL(blob);
+
+    const safeName =
+        (projectName.value || "Untitled Video")
+            .trim()
+            .replace(/[^a-zA-Z0-9_\-]+/g, "_") ||
+        "Untitled_Video";
+
+    const link = document.createElement("a");
+    link.href = blobUrl;
+    link.download = `${safeName}.json`;
+    link.style.display = "none";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => {
+        URL.revokeObjectURL(blobUrl);
+    }, 1000);
+}
+
+function triggerOpen() {
+    fileInput.value?.click();
+}
+
+async function onFileSelected(event) {
+
+    const file = event.target.files?.[0];
+
+    if (!file) {
+        return;
+    }
+
+    try {
+
+        const text = await file.text();
+
+        videoStore.loadProject(text);
+
+        const nameWithoutExt =
+            file.name.replace(/\.json$/i, "");
+
+        projectName.value =
+            nameWithoutExt || "Untitled Video";
+
+    } catch (error) {
+
+        console.error("Open Project Error:", error);
+
+        alert("Proje dosyası açılamadı. Geçerli bir Easy AI Studio proje dosyası olduğundan emin ol.");
+
+    } finally {
+
+        event.target.value = "";
+    }
+}
 
 </script>
 
@@ -53,9 +128,18 @@ const projectName = ref("Untitled Video");
 
     <div class="right">
 
+        <input
+            ref="fileInput"
+            type="file"
+            accept="application/json"
+            hidden
+            @change="onFileSelected"
+        >
+
         <button
             type="button"
             class="tool-btn"
+            @click="triggerOpen"
         >
 
             📂 Open
@@ -66,6 +150,7 @@ const projectName = ref("Untitled Video");
         <button
             type="button"
             class="tool-btn"
+            @click="saveProject"
         >
 
             💾 Save

@@ -4580,7 +4580,8 @@ async function downloadExportFile(outputPath, filename) {
         /*
         SERIALIZATION
         */
-
+        
+        createSnapshot,
         serializeProject,
         loadProject,
 

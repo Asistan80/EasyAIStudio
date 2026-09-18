@@ -5600,3 +5600,51 @@ ValueError: Provider 'ComfyUI' not found.
 [2026-09-19 02:09:35] [INFO] [EasyAIStudio] Providers : 4
 [2026-09-19 02:09:35] [INFO] [EasyAIStudio] Models    : 2
 [2026-09-19 02:09:35] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-19 02:10:08] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-19 02:10:08] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-19 02:10:08] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-19 02:10:08] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-19 02:10:08] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-19 02:11:09] [INFO] [EasyAIStudio] OPTIONS /api/chat/ 200 0.16ms
+[2026-09-19 02:11:19] [INFO] [EasyAIStudio] POST /api/chat/ 200 9328.00ms
+[2026-09-19 02:11:40] [INFO] [EasyAIStudio] POST /api/chat/ 200 3494.38ms
+[2026-09-19 02:12:49] [INFO] [EasyAIStudio] GET /api/gallery 200 16.40ms
+[2026-09-19 02:12:49] [INFO] [EasyAIStudio] GET /api/gallery/84a10acd573846ee92cc7cc75592debe.png 200 43.68ms
+[2026-09-19 02:12:49] [INFO] [EasyAIStudio] GET /api/gallery/2e58a711b46d4c6bbbb5344fea0e4331.png 200 2.88ms
+[2026-09-19 02:13:04] [INFO] [EasyAIStudio] GET /api/gallery 200 8.51ms
+[2026-09-19 02:14:09] [INFO] [EasyAIStudio] GET /api/videos 307 8.94ms
+[2026-09-19 02:14:09] [INFO] [EasyAIStudio] GET /api/videos/ 200 4.21ms
+[2026-09-19 02:14:10] [INFO] [EasyAIStudio] GET /api/videos 307 0.41ms
+[2026-09-19 02:14:10] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.53ms
+[2026-09-19 02:17:07] [INFO] [EasyAIStudio] GET /api/gallery 200 8.55ms
+[2026-09-19 02:17:08] [INFO] [EasyAIStudio] GET /api/gallery 200 8.03ms
+[2026-09-19 02:17:59] [INFO] [EasyAIStudio] GET /api/gallery 200 8.03ms
+[2026-09-19 02:18:05] [INFO] [EasyAIStudio] GET /api/gallery/7be6bc397be34bde9bfc1a26a30ff60e.png 200 1.51ms
+[2026-09-19 02:19:10] [INFO] [EasyAIStudio] GET /api/videos 307 0.64ms
+[2026-09-19 02:19:10] [INFO] [EasyAIStudio] GET /api/videos/ 200 0.48ms
+[2026-09-19 02:21:23] [INFO] [EasyAIStudio] POST /api/files/upload 200 16.54ms
+[2026-09-19 02:21:23] [INFO] [EasyAIStudio] POST /api/files/upload 200 21.99ms
+[2026-09-19 02:21:23] [INFO] [EasyAIStudio] OPTIONS /api/videos/export 200 0.10ms
+[2026-09-19 02:21:24] [INFO] [EasyAIStudio] POST /api/videos/export 200 223.55ms
+[2026-09-19 02:21:24] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.72ms
+[2026-09-19 02:21:24] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.92ms
+[2026-09-19 02:21:25] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.13ms
+[2026-09-19 02:21:25] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.73ms
+[2026-09-19 02:21:26] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.74ms
+[2026-09-19 02:21:26] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.01ms
+[2026-09-19 02:21:27] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.42ms
+[2026-09-19 02:21:27] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.85ms
+[2026-09-19 02:21:28] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.77ms
+[2026-09-19 02:21:28] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.88ms
+[2026-09-19 02:21:28] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_Render_20260919_022123.mp4 200 1.80ms
+[2026-09-19 02:21:51] [INFO] [EasyAIStudio] POST /api/videos/export 200 181.59ms
+[2026-09-19 02:21:51] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.82ms
+[2026-09-19 02:21:51] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.77ms
+[2026-09-19 02:21:52] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 1.14ms
+[2026-09-19 02:21:53] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.84ms
+[2026-09-19 02:21:53] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.65ms
+[2026-09-19 02:21:54] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.73ms
+[2026-09-19 02:21:54] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.79ms
+[2026-09-19 02:21:55] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.65ms
+[2026-09-19 02:21:55] [INFO] [EasyAIStudio] GET /api/videos/export/status 200 0.76ms
+[2026-09-19 02:21:55] [INFO] [EasyAIStudio] GET /exports/EasyAIStudio_Render_20260919_022150.mp4 200 1.25ms
