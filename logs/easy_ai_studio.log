@@ -5477,3 +5477,20 @@ ValueError: Provider 'ComfyUI' not found.
 [2026-09-17 20:15:47] [INFO] [EasyAIStudio] OPTIONS /api/gif/auto-generate 200 0.19ms
 [2026-09-17 20:15:50] [INFO] [EasyAIStudio] POST /api/gif/auto-generate 200 3150.57ms
 [2026-09-17 20:15:50] [INFO] [EasyAIStudio] GET /exports/auto_gif_39d5fe67.gif 200 1.95ms
+[2026-09-18 09:29:31] [INFO] [EasyAIStudio] Logger initialized.
+[2026-09-18 09:29:31] [INFO] [EasyAIStudio] Bootstrap completed.
+[2026-09-18 09:29:31] [INFO] [EasyAIStudio] Providers : 4
+[2026-09-18 09:29:31] [INFO] [EasyAIStudio] Models    : 2
+[2026-09-18 09:29:31] [INFO] [EasyAIStudio] Services  : 10
+[2026-09-18 09:30:11] [INFO] [EasyAIStudio] POST /api/files/upload 200 35.18ms
+[2026-09-18 09:30:28] [INFO] [EasyAIStudio] OPTIONS /api/gif/auto-generate 200 0.10ms
+[2026-09-18 09:30:30] [INFO] [EasyAIStudio] POST /api/gif/auto-generate 200 1978.98ms
+[2026-09-18 09:30:30] [INFO] [EasyAIStudio] GET /exports/auto_gif_0f1cbe9e.gif 200 28.69ms
+[2026-09-18 09:50:43] [INFO] [EasyAIStudio] POST /api/files/upload 200 15.53ms
+[2026-09-18 09:50:48] [INFO] [EasyAIStudio] OPTIONS /api/gif/auto-generate 200 0.11ms
+[2026-09-18 09:50:50] [INFO] [EasyAIStudio] POST /api/gif/auto-generate 200 1537.60ms
+[2026-09-18 09:50:50] [INFO] [EasyAIStudio] GET /exports/auto_gif_cbda461c.gif 200 1.03ms
+[2026-09-18 09:52:12] [INFO] [EasyAIStudio] POST /api/files/upload 200 15.29ms
+[2026-09-18 09:52:21] [INFO] [EasyAIStudio] POST /api/gif/auto-generate 200 2454.31ms
+[2026-09-18 09:52:21] [INFO] [EasyAIStudio] GET /exports/auto_gif_d989f890.gif 200 1.20ms
+[2026-09-18 10:05:15] [INFO] [EasyAIStudio] GET /exports/auto_gif_d989f890.gif 304 1.00ms
